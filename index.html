@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found Portal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.16.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.16.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.16.0/firebase-storage-compat.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Campus Lost & Found Portal</h1>
+</header>
+
+<div class="container">
+
+    <!-- LOST ITEM FORM -->
+    <div class="form-section">
+        <h2>Report LOST Item</h2>
+        <form id="lostForm">
+            <label>Item Name</label>
+            <input type="text" id="lostName" required>
+            <label>Description</label>
+            <textarea id="lostDesc" required></textarea>
+            <label>Your Name</label>
+            <input type="text" id="lostPerson" required>
+            <label>Your Contact</label>
+            <input type="text" id="lostContact" required>
+            <label>Upload Photo</label>
+            <input type="file" id="lostImage" accept="image/*">
+            <button type="submit">Add LOST Item</button>
+        </form>
+    </div>
+
+    <!-- FOUND ITEM FORM -->
+    <div class="form-section">
+        <h2>Report FOUND Item</h2>
+        <form id="foundForm">
+            <label>Item Name</label>
+            <input type="text" id="foundName" required>
+            <label>Description</label>
+            <textarea id="foundDesc" required></textarea>
+            <label>Your Name</label>
+            <input type="text" id="foundPerson" required>
+            <label>Your Contact</label>
+            <input type="text" id="foundContact" required>
+            <label>Upload Photo</label>
+            <input type="file" id="foundImage" accept="image/*">
+            <button type="submit">Add FOUND Item</button>
+        </form>
+    </div>
+</div>
+
+<!-- ALL ITEMS -->
+<div class="list-section">
+    <h2>All Lost & Found Items</h2>
+    <div id="itemsList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
